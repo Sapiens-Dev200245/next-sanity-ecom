@@ -28,10 +28,10 @@ export default async function CategoryPage({
   const data: simplifiedProduct[] = await getData(params.category);
 
   return (
-    <div className="bg-white">
+    <div className="">
       <div className="mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-2xl font-bold tracking-tight ">
             Our Products for {params.category}
           </h2>
         </div>
@@ -51,16 +51,16 @@ export default async function CategoryPage({
 
               <div className="mt-4 flex justify-between">
                 <div>
-                  <h3 className="text-sm text-gray-700">
+                  <h3 className="text-sm ">
                     <Link href={`/product/${product.slug}`}>
                       {product.name}
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">
+                  <p className="mt-1 text-sm ">
                     {product.categoryName}
                   </p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-medium">
                   ${product.price}
                 </p>
               </div>
