@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export function Navlist() {
   const router = useRouter();
@@ -30,8 +31,10 @@ export function Navlist() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {links.map(link=> (
-          <DropdownMenuItem key={link.href} onClick={() => router.push(link.href)}>
-            {link.name}
+          <DropdownMenuItem key={link.href}>
+            <Link href={link.href}>
+                {link.name}
+            </Link>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
