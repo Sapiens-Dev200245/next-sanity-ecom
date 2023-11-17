@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { ShoppingBag } from "lucide-react";
 import { useShoppingCart } from "use-shopping-cart";
 import { ModeToggle } from "./theme";
+import { Navlist } from "./์์Navlist";
 
 const links = [
   { name: "Home", href: "/" },
@@ -48,7 +49,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex divide-x sm:border-l items-center justify-center space-x-9">
+        <div className="flex divide-x sm:border-l items-center justify-center space-x-2 md:space-x-8">
           <Button
             variant={"outline"}
             onClick={() => handleCartClick()}
@@ -60,6 +61,7 @@ export default function Navbar() {
             </span>
           </Button>
           <ModeToggle/>
+          <Navlist/>
         </div>
       </div>
     </header>
